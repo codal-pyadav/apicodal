@@ -27,25 +27,6 @@ class ApiController extends Controller
         $employees = employee::create($request->all());
         return Response::json($employees, 200);
 
-        // $dataValide = $this->validate($request, [
-        //     'empname' => 'required',
-        //     'empaddress' => 'required',
-        //     'empcontact' => 'required',
-        // ]);
-
-        // if ($dataValide) {
-        //     $employees->empname = $request->input('empname');
-        //     $employees->empaddress = $request->input('empaddress');
-        //     $employees->empcontact = $request->input('empcontact');
-        //     $employees->save();
-
-        //     return Response::json($employees, 200);
-        // } else {
-
-        //     return Response::json("Validation Error (Insert Field Data)", 422);
-
-        // }
-
     }
 
 //Fetch All Employee Records
