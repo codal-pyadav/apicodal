@@ -21,6 +21,7 @@ class ApiController extends Controller
         $validator = Validator::make($request->all(), $rules);
 
         if ($validator->fails()) {
+
             return Response::json($validator->errors(), 400);
         }
 
